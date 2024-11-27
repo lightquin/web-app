@@ -2,12 +2,12 @@
   "name": "your-app-name",
   "version": "1.0.0",
   "description": "A brief description of your app.",
-  "main": "app.js",  // Change this to your main file
+  "main": "app.js",
   "scripts": {
-    "start": "node app.js"  // Change this to your start command
+    "start": "node app.js"
   },
   "dependencies": {
-    "express": "^4.17.1",  // Add your dependencies here
+    "express": "^4.17.1",
     "ejs": "^3.1.6",
     "sqlite3": "^5.0.2",
     "body-parser": "^1.19.0"
