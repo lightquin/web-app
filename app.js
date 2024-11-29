@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const itemRoutes = require('./routes/itemRoutes');
 const app = express();
+const asyncHandler = require('express-async-handler');
 const PORT = process.env.PORT || 3000;
 
 app.set('view engine', 'ejs');
