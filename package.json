@@ -3,15 +3,15 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",  // This is the command Render will use to start your app
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Your Name",  // Replace with your name or organization
   "license": "ISC",
-  "description": "A simple web application using Express and SQLite",  // Add a brief description
+  "description": "A simple web application using Express and SQLite",
   "engines": {
-    "node": "14.x"  // Specify the Node.js version you want to use
+    "node": "14.x"
   },
   "dependencies": {
     "body-parser": "^1.20.3",
