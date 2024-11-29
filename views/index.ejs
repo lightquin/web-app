@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Storage</title>
+    <link href="https://cdn.jsdelivr.net/npm/tail windcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto p-4">
+        <h1 class="text-2xl font-bold mb-4">Document Storage</h1>
+        <form action="/add" method="POST" class="mb-4">
+            <input type="text" name="name" placeholder="Item Name" required class="border p-2 mr-2">
+            <input type="text" name="description" placeholder="Description" class="border p-2 mr-2">
+            <button type="submit" class="bg-blue-500 text-white p-2">Add Item</button>
+        </form>
+        <ul>
+            <% items.forEach(item => { %>
+                <li class="flex justify-between items-center bg-white p-2 mb-2 rounded shadow">
+                    <div>
+                        <strong><%= item.name %></strong> - <%= item.description %> (Created: <%= item.date_created %>)
+                    </div>
+                    <div>
+                        <form action="/update" method="POST" class="inline">
+                            <input type="hidden" name="id" value="<%= item.id %>">
+                            <input type="text" name="name" placeholder="New Name" class="border p-1">
+                            <input type="text" name="description" placeholder="New Description" class="border p-1">
+                            <button type="submit" class="bg-yellow-500 text-white p-1">Update</button>
+                        </form>
+                        <form action="/delete/<%= item.id %>" method="POST" class="inline">
+                            <button type="submit" class="bg-red-500 text-white p-1">Delete</button>
+                        </form>
+                    </div>
+                </li>
+            <% }) %>
+        </ul>
+    </div>
+</body>
+</html>
